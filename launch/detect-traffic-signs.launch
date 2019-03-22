@@ -1,0 +1,7 @@
+<launch>
+  <include file="$(find darknet_ros)/launch/yolo_v3.launch" />
+
+  <include file="$(find ueye_cam)/launch/debug.launch" />
+
+  <node name="sign_detector" pkg="car_controller_tools" type="traffic_recognizer.py" />
+</launch>
